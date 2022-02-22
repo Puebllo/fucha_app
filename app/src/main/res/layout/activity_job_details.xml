@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/job_details_image_view"
+        android:layout_width="90dp"
+        android:layout_height="94dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/job_details_job_name_tv"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="104dp"
+        android:text="Job"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/job_details_job_type_tv"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/job_details_job_name_tv"
+        android:layout_alignStart="@+id/job_details_job_name_tv"
+        android:text="Job Type"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/job_details_job_description_tv"
+        android:layout_width="307dp"
+        android:layout_height="56dp"
+        android:layout_below="@+id/job_details_job_type_tv"
+        android:layout_alignStart="@+id/job_details_job_name_tv"
+        android:layout_marginStart="0dp"
+        android:text="Job Description" />
+
+    <Button
+        android:id="@+id/take_job_button"
+        android:layout_width="110dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/map_rl"
+        android:layout_below="@+id/job_details_address_to_string"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/button_background"
+        android:text="@string/take_job"
+        android:textColor="@color/cast_expanded_controller_text_color" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="116dp"
+        android:text="@string/cost_name"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/cost_value_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="148dp"
+        android:text="value"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="183dp"
+        android:text="@string/job_expire_date"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/job_details_expire_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cost_value_text_view"
+        android:layout_alignBottom="@+id/textView13"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="-35dp"
+        android:text="date"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView11"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="256dp"
+        android:text="@string/address"
+        android:textSize="18sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/job_details_address_to_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/job_details_expire_date"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="296dp"
+        android:text="adres"
+        android:textSize="18sp" />
+
+    <RelativeLayout
+        android:id="@+id/map_rl"
+        android:layout_width="match_parent"
+        android:layout_height="249dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true">
+
+           <com.pueblo.software.base.layouts.MapWrapperLayout
+            android:id="@+id/map_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+            android:id="@+id/job_detail_map_fragment"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".JobDetailsActivity" />
+
+        </com.pueblo.software.base.layouts.MapWrapperLayout>
+    </RelativeLayout>
+</RelativeLayout>

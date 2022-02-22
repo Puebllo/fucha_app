@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pueblo.software.base.activites.AddNewJobActivity">
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/job_expire_date"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/expire_date_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="datetime" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expire_date_edit_text"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/cost_name"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/cost_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cost_edit_text"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="0dp"
+        android:text="@string/address"
+        android:textSize="18sp" />
+
+
+    <EditText
+        android:id="@+id/street_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="6dp"
+        android:ems="10"
+        android:hint="@string/street"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/building_nr_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/street_text_view"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginStart="-1dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/building_nr"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/flat_nr_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/building_nr_text_view"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/flat_nr"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/city_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flat_nr_text_view"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:hint="@string/city"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/postal_code_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city_text_view"
+        android:layout_alignStart="@+id/cost_edit_text"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:hint="@string/postal_code"
+        android:inputType="textPersonName"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/add_job_button"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/postal_code_text_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/add_job_button" />
+
+    <Button
+        android:id="@+id/select_date_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="164dp"
+        android:text="@string/select_date_name_button" />
+
+</RelativeLayout>
